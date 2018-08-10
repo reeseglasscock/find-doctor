@@ -1,3 +1,28 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 .doctorImage {
-  width: 75%;
+  width: 100%;
+}
+
+.inputField {
+  margin: 10px;
+  text-align: center;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 4px 5px 8px rgba(34,34,34,0.8);
+  background-color: rgba(184, 184, 184, 0.95);
+  border-color: black;
+  min-width: 80%;
+  max-width: 80%;
+  align-content: center;
 }
