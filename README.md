@@ -1,6 +1,6 @@
 # Doctor Finder
 
-This program is created with javascript to allow a user to enter a birthday and then have it converted to what their age would be on a different planet. Additionally the program will allow a user to answer a few questions which then will let them know how many years left they have to live after calculating life expectancy.
+This program pulls from a doctor api and will list out what doctors are available in the area either by name or by a symptom that a user is experiencing. 
 
 ### Installing
 
@@ -18,13 +18,13 @@ This program is dependent that you already have node installed on your machine a
 npm install
 ```
 
-You will then be able to run the program on your computer or start the test environment by running the scripts located in the package.json file in the repo. To run the test environment you can run:
+You will then need to make sure you get your API key set up to run the program. You can register for your API by going to https://developer.betterdoctor.com/signup to sign up. Afterwards create a .env file and save your key with the variable exports.apiKey=[YOUR_API_KEY]:
 
 ```
-npm run test
+touch .env
 ```
 
-This program does not have a front end interface, but if you design a front end to interact with this program you can run it with node but running this command:
+To run the program run the command from the project file:
 
 ```
 npm run start
@@ -41,9 +41,8 @@ open http://localhost:8080/
 
 ## User Stories
 
-* as a user I can enter my birthday and find my current age.
-* as a user I can enter a planet from the selection of Mercury, Mars, Jupiter, Venus, or Earth, and find out how old I would be in years on those planets.
-* as a user I can find out my life expectancy based on different variables and calculations and get a return statement of how much time I have left to live or how many years I have surpassed my life expectancy. 
+* as a user I can enter a name for a doctor I want to find and have a list of max 10 doctors appear.
+* as a user I can enter a symptom I may have and get a list of max 10 doctors in the area.
 
 ## Authors
 
