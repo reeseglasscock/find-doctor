@@ -9,8 +9,11 @@ $(document).ready(function(){
   $('#checkSymptom').click(function(){
     let symptom = $('#userSymptom').val();
     let findDoctorService = new FindDoctorService();
-    let findDoctor = new FindDoctor();
-    console.log(findDoctor);
+    let promise = findDoctorService.getDoctorBySymptom(symptom);
     
+    promise.then(function(response){
+      let findDoctors = new FindDoctor();
+      let foundDoctors = findDoctors.getDoctor(response)
+    })
   });
 });
