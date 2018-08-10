@@ -17,11 +17,14 @@ $(document).ready(function(){
       let foundDoctors = findDoctors.getDoctor(response)
       
         foundDoctors.forEach(doctor => {
-          console.log(doctor.picture)
           $('#availableDoctors').append(
             `<div class="card">
-              <img src=${doctor.picture}>
+              <img class="doctorImage" src=${doctor.picture}>
               <p>${doctor.firstName} ${doctor.lastName}</p>
+              <p>${doctor.address}</p>
+              <p>${doctor.phoneNumber}</p>
+              <p>${doctor.website}</p>
+              <p>${doctor.acceptingPatients}</p>
               <p>${doctor.bio}</p>
             </div>`
         )
