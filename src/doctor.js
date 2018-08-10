@@ -1,5 +1,5 @@
 export class Doctor {
-  constructor(firstName, lastName, picture, gender, bio, address, phoneNumber, website, acceptingPatients){
+  constructor(firstName, lastName, picture, gender, bio, address, phoneNumber, acceptingPatients, website){
     this.firstName = firstName
     this.lastName = lastName
     this.picture = picture
