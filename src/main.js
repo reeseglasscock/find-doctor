@@ -7,6 +7,7 @@ import { FindDoctor } from './findDoctor.js';
 
 $(document).ready(function(){
   $('#checkSymptom').click(function(){
+    $('#availableDoctors').text('')
     let symptom = $('#userSymptom').val();
     let findDoctorService = new FindDoctorService();
     let promise = findDoctorService.getDoctorBySymptom(symptom);
@@ -14,12 +15,17 @@ $(document).ready(function(){
     promise.then(function(response){
       let findDoctors = new FindDoctor();
       let foundDoctors = findDoctors.getDoctor(response)
-      $('#availableDoctors').append(
+      
         foundDoctors.forEach(doctor => {
-          console.log(doctor)
-          `<p>${doctor.firstName}</p>`
-        })
-      )
+          console.log(doctor.picture)
+          $('#availableDoctors').append(
+            `<div class="card">
+              <img src=${doctor.picture}>
+              <p>${doctor.firstName} ${doctor.lastName}</p>
+              <p>${doctor.bio}</p>
+            </div>`
+        )
+      })
     })
   });
 });
