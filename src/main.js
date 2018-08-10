@@ -14,6 +14,12 @@ $(document).ready(function(){
     promise.then(function(response){
       let findDoctors = new FindDoctor();
       let foundDoctors = findDoctors.getDoctor(response)
+      $('#availableDoctors').append(
+        foundDoctors.forEach(doctor => {
+          console.log(doctor)
+          `<p>${doctor.firstName}</p>`
+        })
+      )
     })
   });
 });
