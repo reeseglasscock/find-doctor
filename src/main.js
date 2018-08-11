@@ -15,10 +15,12 @@ $(document).ready(function(){
     promise.then(function(response){
       let findDoctors = new FindDoctor();
       let foundDoctors = findDoctors.getDoctor(response);
-      
-      foundDoctors.forEach(doctor => {
-        $('.availableDoctors').append(
-          `<div class="card">
+      if (foundDoctors.length == 0 || symptom == '') {
+        $('.availableDoctors').append(`Unfortunately there are no doctors available, please try your search again.`)
+      } else {
+        foundDoctors.forEach(doctor => {
+          $('.availableDoctors').append(
+            `<div class="card">
               <div class="row">
                 <div class="doctorImageContainer col-md-2">
                   <img class="doctorImage" src=${doctor.picture}>
@@ -32,8 +34,9 @@ $(document).ready(function(){
                 </div>
               </div>
             </div>`
-        );
-      });
+          );
+        });
+      } 
     });
   });
   $('#findDoctor').click(function(){
@@ -46,9 +49,12 @@ $(document).ready(function(){
       let findDoctors = new FindDoctor();
       let foundDoctors = findDoctors.getDoctor(response);
       
-      foundDoctors.forEach(doctor => {
-        $('.availableDoctors').append(
-          `<div class="card">
+      if (foundDoctors.length == 0 || doctorName == '') {
+        $('.availableDoctors').append(`Unfortunately there are no doctors available, please try your search again.`)
+      } else {
+        foundDoctors.forEach(doctor => {
+          $('.availableDoctors').append(
+            `<div class="card">
               <div class="row">
                 <div class="doctorImageContainer col-md-2">
                   <img class="doctorImage" src=${doctor.picture}>
@@ -61,10 +67,10 @@ $(document).ready(function(){
                   <p>${doctor.bio}</p>
                 </div>
               </div>
-              
             </div>`
-        );
-      });
+          );
+        });
+      } 
     });
   });
 });
