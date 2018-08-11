@@ -24,7 +24,6 @@ export class FindDoctor {
         website = doctor.practices[0].website;
       }
       let doctors = new Doctor(doctor.profile.first_name, doctor.profile.last_name, doctor.profile.image_url, doctor.profile.gender, doctor.profile.bio, `${doctor.practices[0].visit_address.street}, ` + street2 + ` ${doctor.practices[0].visit_address.city}, ${doctor.practices[0].visit_address.state} ${doctor.practices[0].visit_address.zip}`, doctor.practices[0].phones[0].number, acceptingNewPatients, website);
-      console.log(street2);
       
       doctorsArray.push(doctors);
     });
