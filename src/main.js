@@ -28,7 +28,7 @@ $(document).ready(function(){
                 <div class="doctorInformation col">
                   <p>${doctor.firstName} ${doctor.lastName}</p>
                   <p>Address: ${doctor.address}</p>
-                  <p>Phone Number: ${doctor.phoneNumber} ${doctor.website}</p>
+                  <p>Phone Number: ${doctor.phoneNumber} <a href="${doctor.website}" target="_blank">${doctor.website}</a></p>
                   <p>Accepting Patients: ${doctor.acceptingPatients}</p>
                   <p>${doctor.bio}</p>
                 </div>
@@ -62,7 +62,7 @@ $(document).ready(function(){
                 <div class="doctorInformation col">
                   <p>${doctor.firstName} ${doctor.lastName}</p>
                   <p>Address: ${doctor.address}</p>
-                  <p>Phone Number: ${doctor.phoneNumber} ${doctor.website}</p>
+                  <p>Phone Number: ${doctor.phoneNumber} <a href="${doctor.website}" target="_blank">${doctor.website}</a></p>
                   <p>Accepting Patients: ${doctor.acceptingPatients}</p>
                   <p>${doctor.bio}</p>
                 </div>
