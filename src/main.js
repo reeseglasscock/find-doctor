@@ -16,7 +16,7 @@ $(document).ready(function(){
       let findDoctors = new FindDoctor();
       let foundDoctors = findDoctors.getDoctor(response);
       if (foundDoctors.length == 0 || symptom == '') {
-        $('.availableDoctors').append(`Unfortunately there are no doctors available, please try your search again.`)
+        $('.availableDoctors').append(`<p class="errorUserInput">Unfortunately there are no doctors available, please try your search again.</p>`)
       } else {
         foundDoctors.forEach(doctor => {
           $('.availableDoctors').append(
@@ -50,7 +50,7 @@ $(document).ready(function(){
       let foundDoctors = findDoctors.getDoctor(response);
       
       if (foundDoctors.length == 0 || doctorName == '') {
-        $('.availableDoctors').append(`Unfortunately there are no doctors available, please try your search again.`)
+        $('.availableDoctors').append(`<p class="errorUserInput">Unfortunately there are no doctors available, please try your search again.</p>`)
       } else {
         foundDoctors.forEach(doctor => {
           $('.availableDoctors').append(
