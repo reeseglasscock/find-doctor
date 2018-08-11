@@ -26,7 +26,7 @@ $(document).ready(function(){
                   <img class="doctorImage" src=${doctor.picture}>
                 </div>
                 <div class="doctorInformation col">
-                  <p>${doctor.firstName} ${doctor.lastName}</p>
+                  <h2>${doctor.firstName} ${doctor.lastName}</h2>
                   <p>Address: ${doctor.address}</p>
                   <p>Phone Number: ${doctor.phoneNumber} <a href="${doctor.website}" target="_blank">${doctor.website}</a></p>
                   <p>Accepting Patients: ${doctor.acceptingPatients}</p>
@@ -60,7 +60,7 @@ $(document).ready(function(){
                   <img class="doctorImage" src=${doctor.picture}>
                 </div>
                 <div class="doctorInformation col">
-                  <p>${doctor.firstName} ${doctor.lastName}</p>
+                  <h2>${doctor.firstName} ${doctor.lastName}</h2>
                   <p>Address: ${doctor.address}</p>
                   <p>Phone Number: ${doctor.phoneNumber} <a href="${doctor.website}" target="_blank">${doctor.website}</a></p>
                   <p>Accepting Patients: ${doctor.acceptingPatients}</p>

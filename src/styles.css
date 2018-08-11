@@ -26,6 +26,10 @@ h1 {
   font-size: 4em;
 }
 
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 .doctorImage {
   width: 100%;
   margin-bottom: 15px;
@@ -46,4 +50,18 @@ h1 {
   max-width: 80%;
   align-content: center;
   margin-top: 20px;
+}
+
+.availableDoctors {
+  margin-bottom: 40px;
+}
+
+.btn-outline-primary{
+  color: white;
+  border-color: white;
+}
+
+.form-control{
+  border: 1px solid #fff;
+  border-radius: 1.25rem;
 }
