@@ -32,7 +32,8 @@ h1 {
 }
 
 .inputField {
-  text-align: center;
+  margin: auto;
+  width: 60%;
 }
 
 .card {
@@ -45,8 +46,4 @@ h1 {
   max-width: 80%;
   align-content: center;
   margin-top: 20px;
-}
-
-#userDoctor {
-  margin-left: 40px;
 }

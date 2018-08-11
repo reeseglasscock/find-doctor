@@ -9,12 +9,18 @@
 </head>
 <body>
     <header><h1>Find A Doctor In Portland</h1></header>
-    <div class="col inputField">
-            <input type="text" id="userSymptom" placeholder="Enter symptom">
-            <button class="btn btn-primary" type="button" id="checkSymptom">Find Doctor</button>
-            <input type="text" id="userDoctor" placeholder="Enter doctor name">
-            <button class="btn btn-primary" type="button" id="findDoctor">Find Doctor</button>
-    </div>
+        <div class="input-group mb-3 inputField">
+            <input type="text" class="form-control" id="userSymptom" placeholder="Enter symptom" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="checkSymptom">Find Doctor</button>
+            </div>
+        </div>
+        <div class="input-group mb-3 inputField">
+            <input type="text" class="form-control" id="userDoctor" placeholder="Enter doctor's name" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="findDoctor">Find Doctor</button>
+            </div>
+        </div>
         <div class="col">
             <div class="availableDoctors row"></div>
         </div>
