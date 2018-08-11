@@ -79,3 +79,7 @@ h2 {
   margin: auto;
   font-size: 1.75em;
 }
+
+.btn {
+  border-radius: 1.25rem;
+}
