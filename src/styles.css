@@ -33,6 +33,7 @@ h2 {
 .doctorImage {
   width: 100%;
   margin-bottom: 15px;
+  border-radius: 1rem;
 }
 
 .inputField {
